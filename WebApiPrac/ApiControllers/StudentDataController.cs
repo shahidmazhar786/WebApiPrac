@@ -4,9 +4,11 @@ using System.Linq;
 using System.Net;
 using System.Net.Http;
 using System.Web.Http;
+using System.Web.Http.Cors;
 
 namespace WebApiPrac.ApiControllers
 {
+    [EnableCors(origins: "http://localhost:64166", headers: "*", methods: "*")]
     public class StudentDataController : ApiController
     { 
         [HttpGet]
